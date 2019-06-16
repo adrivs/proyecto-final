@@ -18,10 +18,10 @@ export const getEvents = () => async dispatch => {
         });
     } catch (err) {
         dispatch({
-            type: EVENT_ERROR
-            // payload: {
-            //     status: err.response.status
-            // }
+            type: EVENT_ERROR,
+            payload: {
+                status: err.response.status
+            }
         });
     }
 };
@@ -99,6 +99,12 @@ export const addEvent = formData => async dispatch => {
             payload: res.data
         });
         dispatch(setAlert('Event created', 'success'));
+
+        const _res = await axios.get('/events');
+        dispatch({
+            type: GET_EVENTS,
+            payload: _res.data
+        });
     } catch (err) {
         dispatch({
             type: EVENT_ERROR,

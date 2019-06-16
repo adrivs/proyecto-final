@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import ReactMapGL, { Marker } from 'react-map-gl';
+import ReactMapGL from 'react-map-gl';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { takeOffEvent, joinEvent, deleteEvent } from '../../actions/event';
-import { set } from 'mongoose';
 
 const EventItem = ({
     auth,
@@ -16,11 +15,15 @@ const EventItem = ({
 }) => {
     useEffect(() => {
         getLatLang();
-    }, [getLatLang]);
+        setViewport({
+            ...viewport,
+            width: window.innerWidth < 761 ? 300 : 500
+        });
+    }, []);
 
     const [viewport, setViewport] = useState({
-        width: 400,
-        height: 450,
+        width: null,
+        height: 230,
         latitude: 37.7577,
         longitude: -122.4376,
         zoom: 13
@@ -35,10 +38,23 @@ const EventItem = ({
                 latitude: parseFloat(res.data[0].lat),
                 longitude: parseFloat(res.data[0].lon)
             });
-            console.log(latLon);
             return latLon;
         } catch (err) {
             console.error(err.message);
+        }
+    };
+
+    const changeWidth = () => {
+        if (window.innerWidth <= 760) {
+            setViewport({
+                ...viewport,
+                width: 250
+            });
+        } else {
+            setViewport({
+                ...viewport,
+                width: 500
+            });
         }
     };
 
@@ -72,10 +88,10 @@ const EventItem = ({
                     })} */}
                         </p>
                     </div>
-                    <div className='col-lg-8'>
+                    <div className='col-lg-8 map-div'>
                         <ReactMapGL
-                            width={500}
-                            height={230}
+                            width={viewport.width}
+                            height={viewport.height}
                             latitude={viewport.latitude}
                             longitude={viewport.longitude}
                             zoom={viewport.zoom}

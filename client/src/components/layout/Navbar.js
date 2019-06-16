@@ -46,7 +46,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout, loading }) => {
 
     return (
         <div>
-            <nav className='navbar navbar-expand-lg navbar-light'>
+            <nav className='navbar navbar-expand-lg navbar-dark'>
                 <div>
                     <Link className='navbar-brand' to='/'>
                         <span className='brand-title'>Clover</span>

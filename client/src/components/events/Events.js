@@ -7,7 +7,7 @@ import { getEvents } from '../../actions/event';
 const Events = ({ getEvents, event: { events, loading } }) => {
     useEffect(() => {
         getEvents();
-    }, [getEvents]);
+    }, []);
 
     const [searchedEvent, setEvent] = useState({
         eventFiltered: ''
@@ -83,11 +83,13 @@ const Events = ({ getEvents, event: { events, loading } }) => {
 };
 
 Events.propTypes = {
-    getEvents: PropTypes.func.isRequired
+    getEvents: PropTypes.func.isRequired,
+    events: PropTypes.array.isRequired
 };
 
 const mapStateToProps = state => ({
-    event: state.event
+    event: state.event,
+    events: state.events // Línea añadida para ver si funciona lo de que cargue del tirón el componente Events.
 });
 export default connect(
     mapStateToProps,

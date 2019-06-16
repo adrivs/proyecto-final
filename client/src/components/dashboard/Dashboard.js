@@ -14,9 +14,9 @@ const Dashboard = ({
     event: { events },
     loading
 }) => {
-    useEffect(() => {
+    /* useEffect(() => {
         getEvents();
-    }, [getEvents]);
+    }, [getEvents]); */
 
     useEffect(() => {
         getCurrentProfile();
@@ -26,7 +26,6 @@ const Dashboard = ({
         <div className='container'>Loading...</div>
     ) : (
         <div className='container'>
-            {console.log(events)}
             <div>
                 {profile !== null ? (
                     <Fragment>

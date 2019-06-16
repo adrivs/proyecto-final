@@ -40,6 +40,93 @@ const Landing = ({ isAuthenticated }) => {
                     }
                 />
             </div>
+            <div
+                id='carouselExampleControls'
+                className='carousel slide carousel-opinions '
+                data-ride='carousel'
+            >
+                <h2>Opinions</h2>
+                <div className='carousel-inner container'>
+                    <div className='carousel-item active'>
+                        <div class='card'>
+                            <div class='card-body'>
+                                <blockquote class='blockquote mb-0'>
+                                    <p>
+                                        This web is so good. I have made a lot
+                                        of new friends and I have improved my
+                                        english. I recommend it!
+                                    </p>
+                                    <footer class='blockquote-footer'>
+                                        <cite title='Source Title'>
+                                            John Doe
+                                        </cite>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='carousel-item'>
+                        <div class='card'>
+                            <div class='card-body'>
+                                <blockquote class='blockquote mb-0'>
+                                    <p>
+                                        The platform is awesome. I can visit new
+                                        places with people that I don't know and
+                                        communicate in the same language.
+                                    </p>
+                                    <footer class='blockquote-footer'>
+                                        <cite title='Source Title'>
+                                            Winston Smith
+                                        </cite>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='carousel-item'>
+                        <div class='card'>
+                            <div class='card-body'>
+                                <blockquote class='blockquote mb-0'>
+                                    <p>
+                                        I have to say that I have met my new
+                                        girlfriend because of this web. I'm so
+                                        happy with this, use it!
+                                    </p>
+                                    <footer class='blockquote-footer'>
+                                        <cite title='Source Title'>
+                                            Fulano Mengano
+                                        </cite>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a
+                    className='carousel-control-prev '
+                    href='#carouselExampleControls'
+                    role='button'
+                    data-slide='prev'
+                >
+                    <span
+                        className='carousel-control-prev-icon'
+                        aria-hidden='true'
+                    />
+                    <span className='sr-only'>Previous</span>
+                </a>
+                <a
+                    className='carousel-control-next'
+                    href='#carouselExampleControls'
+                    role='button'
+                    data-slide='next'
+                >
+                    <span
+                        className='carousel-control-next-icon'
+                        aria-hidden='true'
+                    />
+                    <span className='sr-only'>Next</span>
+                </a>
+            </div>
             <footer>
                 <Footer />
             </footer>
