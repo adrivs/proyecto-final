@@ -1,7 +1,7 @@
 # Clover
 
 ## ¿En qué consiste?
-El objetivo de esta aplicación web es poner en contacto a gente la cual habla un mismo idioma. Creas un evento donde eliges que se va a hacer, lugar, fecha, hora e idioma que se va a hablar. La gente se puede apuntar a estos eventos.
+El objetivo de esta aplicación web es poner en contacto a gente la cual habla un mismo idioma. Creas un evento donde eliges que se va a hacer, lugar, fecha, hora e idioma que se va a hablar. La gente se puede apuntar a estos eventos. Aquí puedes ver las tecnologías que he utilizado: [Click aquí](https://github.com/AdrianVillalbaSanchez/presentacion-proyecto-final/blob/master/PresentacionFinal.pdf)
 
 ### Uso en local
 
