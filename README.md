@@ -8,7 +8,7 @@ Has de tener instalado en tu ordenador NodeJS.
    * npm i
    * npm run server
 
-* Iniciar el lado cliente
+* Iniciar el lado cliente (en la carpeta client)
     * npm i
     * npm start
 
